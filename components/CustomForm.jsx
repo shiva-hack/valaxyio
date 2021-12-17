@@ -28,7 +28,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           className="flex-1 px-4 py-4 leading-none border border-gray-200 rounded-lg focus:outline-none"
           required
         />
-        <button className="inline-block px-5 py-4 md:py-2 font-semibold text-white rounded-lg focus:outline-none bg-black hover:bg-gray-800">Keep me posted!</button>
+        <button className="inline-block px-5 py-4 md:py-2 font-semibold text-white rounded-lg focus:outline-none bg-black hover:bg-gray-800">Keep me in the loop</button>
       </div>
 
 
