@@ -87,7 +87,7 @@ export default function Home() {
             <img src="/logo.svg" alt="logo" className="footer-logo" />
           </a>
           <p className="text-sm text-gray-300 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-            © 2022 Valaxy —
+            © {new Date().getFullYear()} Valaxy —
             <a
               href="https://twitter.com/valaxyio"
               className="text-white ml-1"
