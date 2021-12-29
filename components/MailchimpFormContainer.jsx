@@ -4,7 +4,6 @@ import CustomForm from './CustomForm';
 const MailchimpFormContainer = props => {
   const postUrl = `https://valaxy.us20.list-manage.com/subscribe/post?u=${process.env.NEXT_PUBLIC_MAILCHIMP_U}&id=${process.env.NEXT_PUBLIC_MAILCHIMP_ID}`;
   return (
-    <div className="mc__form-container">
       <MailchimpSubscribe
         url={postUrl}
         render={({ subscribe, status, message }) => (
@@ -14,7 +13,6 @@ const MailchimpFormContainer = props => {
           />
         )}
       />
-    </div>
   );
 };
 

@@ -1,13 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply bg-steel-gray-600;
+}
+
 .art-bg {
-background-color: #FFFFFF;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23F1F1F1'/%3E%3Cstop offset='1' stop-color='%23FFFFFF'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23DBDBDB' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23DBDBDB' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
-background-attachment: fixed;
-background-size: cover;
-background-position: center;
+  background: linear-gradient(
+    to left top,
+    rgb(225, 29, 72),
+    rgb(147, 51, 234),
+    rgb(37, 99, 235)
+  );
+}
+
+
+.text-gradient {
+  @apply text-transparent bg-clip-text bg-gradient-to-tl from-rose-600 via-purple-600 to-blue-600;
+}
+
+.bg-wrapper {
+  top: 147px;
+  right: 40px;
+  bottom: -148px;
+  z-index: -1;
+  height: 60vh;
+  max-height: 60vh;
+  min-width: 60vh;
+  position: absolute;
+  border-radius: 40%;
+  @apply bg-steel-gray-400 blur-2xl opacity-30 md:hidden;
+}
+
+.logo {
+    width: 100%;
+    max-width: 176px;
+}
+
+.footer-logo {
+  width: 100%;
+  max-width: 120px;
+}
+
+/* custom styles */
+.valaxy-wrapper {
+  @apply flex flex-col min-h-screen text-white bg-steel-gray-600 font-poppins md:px-8 px-4 space-y-8 md:space-y-0;
+}
+
+.valaxy-header {
+  @apply container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center space-y-4 md:space-y-0;
+}
+
+.valaxy-logo-container {
+  @apply flex font-medium items-center;
+}
+
+.valaxy-main-nav {
+  @apply md:ml-auto flex flex-wrap items-center text-base justify-center space-x-5;
+}
+
+.valaxy-nav-link {
+  @apply hover:text-gray-400 font-bold tracking-wider;
+}
+
+main {
+  @apply flex flex-grow flex-col items-center justify-center;
+  z-index: 1;
+}
+
+.valaxy-hero-section {
+  @apply container mx-auto flex px-5 md:flex-row flex-col items-center md:py-5;
+}
+
+.valaxy-hero-container {
+  @apply lg:flex-grow lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center space-y-4;
+}
+
+h2 {
+  @apply sm:text-2xl text-xl xl:text-4xl font-bold text-gray-300 lg:ml-4 xl:ml-4;
+}
+
+.valaxy-hero-container > p {
+  @apply sm:text-lg text-sm leading-relaxed text-gray-300 lg:ml-4 xl:ml-4;
+}
+
+.valaxy-form-wrapper {
+  @apply pt-4 flex w-full md:justify-start justify-center items-end flex-col space-y-4;
+}
+
+.valaxy-form-container {
+  @apply md:relative w-full;
+}
+
+.valaxy-form-input {
+  @apply h-14 md:h-20 w-full px-6 text-white md:pr-20 rounded-full focus:outline-none hover:cursor-pointer bg-opacity-5 bg-white hover:bg-opacity-10 text-center md:text-left md:px-8;
+}
+
+.valaxy-action {
+  @apply h-14 md:h-14 flex flex-col w-full items-center font-bold tracking-wider justify-center bg-black text-white rounded-full p-4 md:px-6;
+}
+
+.valaxy-action-container {
+  @apply md:absolute md:right-2 md:top-2 rounded-full bg-gradient-to-r p-1 from-[#2563EB] via-[#9333EA] to-[#E11D48];
+}
+
+.f-container {
+  @apply md:relative flex flex-col space-y-4 md:space-y-0;
+}
+
+.custom-image-xl {
+  background: url("/banner.png") no-repeat top right;
+  background-position-x: calc(100vw - 35vw + 16px);
+  background-position-y: 0px;
+  opacity: 0.9;
+  background-size: 35vw;
+}
+
+.custom-image-lg {
+  background: url("/banner.png") no-repeat top right;
+  background-position-x: calc(100vw - 50vw + 16px);
+  background-position-y: 0px;
+  opacity: 0.9;
+  background-size: 50vw;
+}
+
+.custom-image-md {
+  background: none;
+  background-position-x: calc(100vw - 55vw + 16px);
+  background-position-y: 0px;
+  background-size: 55vw;
 }
