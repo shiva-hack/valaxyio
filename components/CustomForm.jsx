@@ -34,7 +34,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           />
           <div className="valaxy-action-container">
             <button type="submit" className="valaxy-action">
-              Get Early Access
+              Keep Me Posted
             </button>
           </div>
         </div>
